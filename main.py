@@ -70,3 +70,21 @@ MyClass5().addthree()
 
 obj5 = MyClass5()
 obj5.addthree()
+
+#inheritance
+class Father:
+    f = 5
+    s = 10
+
+    def sub(self):
+        result = self.f - self.s
+        print(result)
+
+
+
+class Son(Father):
+    
+
+obj6 = Father()
+obj6.sub()
+
