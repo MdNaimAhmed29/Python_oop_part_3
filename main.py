@@ -72,7 +72,7 @@ obj5 = MyClass5()
 obj5.addthree()
 
 #inheritance
-class Father:
+class Father: #Parent Class
     f = 5
     s = 10
 
@@ -80,11 +80,58 @@ class Father:
         result = self.f - self.s
         print(result)
 
+    def mult(self):
+        result2 = self.f * self.s
+        print(result2)
+
+class Mother: #Parent Class
+    y = 10
+    x = 10
+
+    def sub2(self):
+        result = self.x - self.y
+        print(result)
+
+    def mult2(self):
+        result2 = self.x * self.y
+        print(result2)
 
 
-class Son(Father):
-    
+class Son(Father, Mother): #Child Class
+    pass
 
-obj6 = Father()
+obj6 =  Son()
 obj6.sub()
+obj6.mult()
+obj6.sub2()
+obj6.mult2()
 
+class GranFather: #Parent Class
+    f = 5
+    s = 10
+
+    def sub3(self):
+        result = self.f - self.s
+        print(result)
+
+    def mult4(self):
+        result2 = self.f * self.s
+        print(result2)
+
+class Father(GranFather): #Parent Class
+    pass
+
+class Son(Father): #Parent Class
+    pass
+
+obj7 = GranFather()
+obj7.sub3()
+obj7.mult4()
+
+obj8 = Father()
+obj8.sub3()
+obj8.mult4()
+
+obj9 = Son()
+obj9.sub3()
+obj9.mult4()
